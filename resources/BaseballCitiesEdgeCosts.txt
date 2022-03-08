@@ -1,0 +1,336 @@
+ Atlanta, Baltimore, 927
+Atlanta, Chicago A, 944
+Atlanta, Chicago N, 944
+Atlanta, Cincinnati, 373
+Atlanta, Cleveland, 555
+Atlanta, Detroit, 597
+Atlanta, Kansas City, 675
+Atlanta, Miami, 973
+Atlanta, Milwaukee, 669
+Atlanta, Minneapolis, 907
+Atlanta, Pittsburgh, 521
+Atlanta, St. Louis, 467
+Atlanta, Tampa, 670
+Atlanta, Toronto, 734
+Atlanta, Washington DC, 871
+Baltimore, Boston, 577
+Baltimore, Chicago A, 973
+Baltimore, Chicago N, 973
+Baltimore, Cincinnati, 419
+Baltimore, Cleveland, 307
+Baltimore, Detroit, 396
+Baltimore, Kansas City, 960
+Baltimore, Milwaukee, 641
+Baltimore, Minneapolis, 937
+Baltimore, New York A, 272
+Baltimore, New York N, 272
+Baltimore, Philadelphia, 144
+Baltimore, Pittsburgh, 196
+Baltimore, St. Louis, 730
+Baltimore, Toronto, 333
+Baltimore, Washington DC, 57
+Boston, Baltimore, 577
+Boston, Cincinnati, 733
+Boston, Cleveland, 549
+Boston, Detroit, 611
+Boston, Milwaukee, 855
+Boston, New York A, 305
+Boston, New York N, 305
+Boston, Philadelphia, 435
+Boston, Pittsburgh, 481
+Boston, Toronto, 429
+Boston, Washington DC, 633
+Chicago A, Atlanta, 944
+Chicago A, Baltimore, 973
+Chicago A, Chicago N, 0
+Chicago A, Cincinnati, 250
+Chicago A, Cleveland, 307
+Chicago A, Detroit, 237
+Chicago A, Kansas City, 412
+Chicago A, Milwaukee, 81
+Chicago A, Minneapolis, 354
+Chicago A, Pittsburgh, 409
+Chicago A, St. Louis, 262
+Chicago A, Toronto, 468
+Chicago A, Washington DC, 955
+Chicago N, Atlanta, 944
+Chicago N, Baltimore, 973
+Chicago N, Chicago A, 0
+Chicago N, Cincinnati, 250
+Chicago N, Cleveland, 307
+Chicago N, Detroit, 237
+Chicago N, Kansas City, 412
+Chicago N, Milwaukee, 81
+Chicago N, Minneapolis, 354
+Chicago N, Pittsburgh, 409
+Chicago N, St. Louis, 262
+Chicago N, Toronto, 468
+Chicago N, Washington DC, 955
+Cincinnati, Atlanta, 373
+Cincinnati, Baltimore, 419
+Cincinnati, Boston, 733
+Cincinnati, Chicago A, 250
+Cincinnati, Chicago N, 250
+Cincinnati, Cleveland, 217
+Cincinnati, Dallas, 817
+Cincinnati, Detroit, 230
+Cincinnati, Houston, 896
+Cincinnati, Kansas City, 541
+Cincinnati, Miami, 955
+Cincinnati, Milwaukee, 324
+Cincinnati, Minneapolis, 604
+Cincinnati, New York A, 567
+Cincinnati, New York N, 567
+Cincinnati, Philadelphia, 501
+Cincinnati, Pittsburgh, 256
+Cincinnati, St. Louis, 308
+Cincinnati, Tampa, 779
+Cincinnati, Toronto, 407
+Cincinnati, Washington DC, 401
+Cleveland, Atlanta, 555
+Cleveland, Baltimore, 307
+Cleveland, Boston, 549
+Cleveland, Chicago A, 307
+Cleveland, Chicago N, 307
+Cleveland, Cincinnati, 217
+Cleveland, Detroit, 90
+Cleveland, Kansas City, 698
+Cleveland, Milwaukee, 334
+Cleveland, Minneapolis, 629
+Cleveland, New York A, 403
+Cleveland, New York N, 403
+Cleveland, Philadelphia, 358
+Cleveland, Pittsburgh, 114
+Cleveland, St. Louis, 491
+Cleveland, Tampa, 937
+Cleveland, Toronto, 188
+Cleveland, Washington DC, 304
+Dallas, Cincinnati, 817
+Dallas, Detroit, 999
+Dallas, Houston, 362
+Dallas, Kansas City, 454
+Dallas, Milwaukee, 857
+Dallas, Minneapolis, 863
+Dallas, St. Louis, 547
+Denver, Kansas City, 557
+Denver, Milwaukee, 912
+Denver, Minneapolis, 698
+Denver, Phoenix, 941
+Denver, St. Louis, 794
+Detroit, Atlanta, 597
+Detroit, Baltimore, 396
+Detroit, Boston, 611
+Detroit, Chicago A, 237
+Detroit, Chicago N, 237
+Detroit, Cincinnati, 230
+Detroit, Cleveland, 90
+Detroit, Dallas, 999
+Detroit, Kansas City, 643
+Detroit, Milwaukee, 251
+Detroit, Minneapolis, 542
+Detroit, New York A, 480
+Detroit, New York N, 480
+Detroit, Philadelphia, 441
+Detroit, Pittsburgh, 250
+Detroit, St. Louis, 454
+Detroit, Tampa, 994
+Detroit, Toronto, 206
+Detroit, Washington DC, 393
+Houston, Cincinnati, 896
+Houston, Dallas, 362
+Houston, Kansas City, 646
+Houston, St. Louis, 679
+Kansas City, Atlanta, 675
+Kansas City, Baltimore, 960
+Kansas City, Chicago A, 412
+Kansas City, Chicago N, 412
+Kansas City, Cincinnati, 541
+Kansas City, Cleveland, 698
+Kansas City, Dallas, 454
+Kansas City, Denver, 557
+Kansas City, Detroit, 643
+Kansas City, Houston, 646
+Kansas City, Milwaukee, 441
+Kansas City, Minneapolis, 411
+Kansas City, Pittsburgh, 779
+Kansas City, St. Louis, 237
+Kansas City, Toronto, 846
+Kansas City, Washington DC, 940
+Los Angeles A, Los Angeles N, 0
+Los Angeles A, Oakland, 552
+Los Angeles A, Phoenix, 573
+Los Angeles A, San Diego, 179
+Los Angeles A, San Francisco, 558
+Los Angeles N, Los Angeles A, 0
+Los Angeles N, Oakland, 552
+Los Angeles N, Phoenix, 573
+Los Angeles N, San Diego, 179
+Los Angeles N, San Francisco, 558
+Miami, Atlanta, 973
+Miami, Cincinnati, 955
+Miami, Tampa, 329
+Milwaukee, Baltimore, 641
+Milwaukee, Boston, 855
+Milwaukee, Chicago A, 81
+Milwaukee, Chicago N, 81
+Milwaukee, Cincinnati, 324
+Milwaukee, Cleveland, 334
+Milwaukee, Dallas, 857
+Milwaukee, Denver, 912
+Milwaukee, Detroit, 251
+Milwaukee, Kansas City, 441
+Milwaukee, Minneapolis, 298
+Milwaukee, New York A, 732
+Milwaukee, New York N, 732
+Milwaukee, Philadelphia, 692
+Milwaukee, Pittsburgh, 445
+Milwaukee, St. Louis, 327
+Milwaukee, Toronto, 430
+Milwaukee, Washington DC, 634
+Minneapolis, Baltimore, 937
+Minneapolis, Chicago A, 354
+Minneapolis, Chicago N, 354
+Minneapolis, Cincinnati, 604
+Minneapolis, Cleveland, 629
+Minneapolis, Dallas, 863
+Minneapolis, Denver, 698
+Minneapolis, Detroit, 542
+Minneapolis, Kansas City, 411
+Minneapolis, Milwaukee, 298
+Minneapolis, Philadelphia, 983
+Minneapolis, Pittsburgh, 741
+Minneapolis, St. Louis, 466
+Minneapolis, Toronto, 691
+Minneapolis, Washington DC, 931
+New York A, Baltimore, 272
+New York A, Boston, 305
+New York A, Cincinnati, 567
+New York A, Cleveland, 403
+New York A, Detroit, 480
+New York A, Milwaukee, 732
+New York A, New York N, 0
+New York A, Philadelphia, 129
+New York A, Pittsburgh, 314
+New York A, St. Louis, 871
+New York A, Toronto, 341
+New York A, Washington DC, 328
+New York N, Baltimore, 272
+New York N, Boston, 305
+New York N, Cincinnati, 567
+New York N, Cleveland, 403
+New York N, Detroit, 480
+New York N, Milwaukee, 732
+New York N, New York A, 0
+New York N, Philadelphia, 129
+New York N, Pittsburgh, 314
+New York N, St. Louis, 871
+New York N, Toronto, 341
+New York N, Washington DC, 328
+Oakland, Los Angeles A, 552
+Oakland, Los Angeles N, 552
+Oakland, San Diego, 731
+Oakland, San Francisco, 13
+Philadelphia, Baltimore, 144
+Philadelphia, Boston, 435
+Philadelphia, Cincinnati, 501
+Philadelphia, Cleveland, 358
+Philadelphia, Detroit, 441
+Philadelphia, Milwaukee, 692
+Philadelphia, Minneapolis, 983
+Philadelphia, New York A, 129
+Philadelphia, New York N, 129
+Philadelphia, Pittsburgh, 257
+Philadelphia, St. Louis, 808
+Philadelphia, Toronto, 335
+Philadelphia, Washington DC, 199
+Pittsburgh, Atlanta, 521
+Pittsburgh, Baltimore, 196
+Pittsburgh, Boston, 481
+Pittsburgh, Chicago A, 409
+Pittsburgh, Chicago N, 409
+Pittsburgh, Cincinnati, 256
+Pittsburgh, Cleveland, 114
+Pittsburgh, Detroit, 250
+Pittsburgh, Kansas City, 779
+Pittsburgh, Milwaukee, 445
+Pittsburgh, Minneapolis, 741
+Pittsburgh, New York A, 314
+Pittsburgh, New York N, 314
+Pittsburgh, Philadelphia, 257
+Pittsburgh, St. Louis, 557
+Pittsburgh, Tampa, 874
+Pittsburgh, Toronto, 223
+Pittsburgh, Washington DC, 189
+Phoenix, Denver, 941
+Phoenix, Los Angeles A, 573
+Phoenix, Los Angeles N, 573
+Phoenix, San Diego, 480
+San Diego, Los Angeles A, 179
+San Diego, Los Angeles N, 179
+San Diego, Oakland, 731
+San Diego, Phoenix, 480
+San Diego, San Francisco, 737
+San Francisco, Los Angeles A, 558
+San Francisco, Los Angeles N, 558
+San Francisco, Oakland, 13
+San Francisco, San Diego, 737
+St. Louis, Atlanta, 467
+St. Louis, Baltimore, 730
+St. Louis, Chicago A, 262
+St. Louis, Chicago N, 262
+St. Louis, Cincinnati, 308
+St. Louis, Cleveland, 491
+St. Louis, Dallas, 547
+St. Louis, Denver, 794
+St. Louis, Detroit, 454
+St. Louis, Houston, 679
+St. Louis, Kansas City, 237
+St. Louis, Milwaukee, 327
+St. Louis, Minneapolis, 466
+St. Louis, New York A, 871
+St. Louis, New York N, 871
+St. Louis, Philadelphia, 808
+St. Louis, Pittsburgh, 557
+St. Louis, Tampa, 861
+St. Louis, Toronto, 660
+St. Louis, Washington DC, 708
+Tampa, Atlanta, 670
+Tampa, Cincinnati, 779
+Tampa, Cleveland, 937
+Tampa, Detroit, 994
+Tampa, Miami, 329
+Tampa, Pittsburgh, 874
+Tampa, St. Louis, 861
+Toronto, Baltimore, 333
+Toronto, Boston, 429
+Toronto, Chicago A, 468
+Toronto, Chicago N, 468
+Toronto, Cincinnati, 407
+Toronto, Cleveland, 188
+Toronto, Detroit, 206
+Toronto, Kansas City, 846
+Toronto, Milwaukee, 430
+Toronto, Minneapolis, 691
+Toronto, New York A, 341
+Toronto, New York N, 341
+Toronto, Philadelphia, 335
+Toronto, Pittsburgh, 223
+Toronto, St. Louis, 660
+Toronto, Washington DC, 350
+Washington DC, Atlanta, 871
+Washington DC, Baltimore, 57
+Washington DC, Boston, 633
+Washington DC, Chicago A, 955
+Washington DC, Chicago N, 955
+Washington DC, Cincinnati, 401
+Washington DC, Cleveland, 304
+Washington DC, Detroit, 393
+Washington DC, Kansas City, 940
+Washington DC, Milwaukee, 634
+Washington DC, Minneapolis, 931
+Washington DC, New York A, 328
+Washington DC, New York N, 328
+Washington DC, Philadelphia, 199
+Washington DC, Pittsburgh, 189
+Washington DC, St. Louis, 708
+Washington DC, Toronto, 350
