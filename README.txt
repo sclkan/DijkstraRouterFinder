@@ -12,12 +12,12 @@ src/shortestPath/Connection.java
     - One object of Connections class represents a connection between two cities with a positive distance.
 
 src/shortestPath/FHgraph.java
-    - A graph data structure that contains vertices, edges and adjacency list
+    - Graph data structure that contains vertices, edges and adjacency list
     - Incorporates Dijkstra's algorithm which can compute the shortest path
-    - An updated dijkstra() method that can now exclude specified cities from the shortest path
+    - Updated dijkstra() method that can now exclude specified cities from the shortest path
 
 src/shortestPath/Pair.java
-    - A pair data structure that is used to create an adjacency list
+    - Pair data structure that is used to create an adjacency list
     - Stores vertices and their corresponding costs
 
 src/shortestPath/RouteFinder.java
