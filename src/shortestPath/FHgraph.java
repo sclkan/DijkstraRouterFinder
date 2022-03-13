@@ -241,15 +241,24 @@ public class FHgraph<E>
     }
 
     // algorithms
-    public boolean dijkstra(E x)
+    public boolean dijkstra(E x, ArrayList<E> avoidCities)
     {
         FHvertex<E> w, s, v;
+        ArrayList<FHvertex<E>> verticesToAvoid =  new ArrayList<>();;
         Pair<FHvertex<E>, Double> edge;
         Iterator< FHvertex<E> > iter;
         Iterator< Pair<FHvertex<E>, Double> > edgeIter;
         Double costVW;
         Deque< FHvertex<E> > partiallyProcessedVerts
                 = new LinkedList< FHvertex<E> >();
+
+        //Find the corresponding vertices for data points in the citiesToAvoid array
+        //Obtain vertex only if it is a valid city
+        for (E cities:avoidCities)
+        {
+            if (getVertexWithThisData(cities)!=null)
+                verticesToAvoid.add(getVertexWithThisData(cities));
+        }
 
         s = getVertexWithThisData(x);
         if (s == null)
@@ -274,7 +283,8 @@ public class FHgraph<E>
                 edge = edgeIter.next();
                 w = edge.first;
                 costVW = edge.second;
-                if ( v.dist + costVW < w.dist )
+                //add w only if it is not a vertex that we need to avoid
+                if (v.dist + costVW < w.dist && !verticesToAvoid.contains(w))
                 {
                     w.dist = v.dist + costVW;
                     w.nextInPath = v;
@@ -289,7 +299,7 @@ public class FHgraph<E>
 
 
     // applies dijkstra, print path - could skip dijkstra()
-    public boolean showShortestPath(E x1, E x2)
+    public boolean showShortestPath(E x1, E x2, ArrayList<E> avoidCities)
     {
         FHvertex<E> start, stop, vert;
         Stack< FHvertex<E> > pathStack = new Stack< FHvertex<E> >();
@@ -300,7 +310,7 @@ public class FHgraph<E>
             return false;
 
         // perhaps add argument opting to skip if pre-computed
-        dijkstra(x1);
+        dijkstra(x1, avoidCities);
 
         if (stop.dist == FHvertex.INFINITY)
         {
@@ -328,13 +338,13 @@ public class FHgraph<E>
     }
 
     // applies dijkstra, prints distances - could skip dijkstra()
-    public boolean showDistancesTo(E x)
+    public boolean showDistancesTo(E x, ArrayList<E> avoidCities)
     {
 
         Iterator< FHvertex<E> > iter;
         FHvertex<E> vert;
 
-        if (!dijkstra(x))
+        if (!dijkstra(x, avoidCities))
             return false;
 
         for (iter = vertexSet.iterator(); iter.hasNext(); )
