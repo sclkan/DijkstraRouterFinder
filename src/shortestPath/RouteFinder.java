@@ -67,9 +67,24 @@ public class RouteFinder
 		baseBallRoutes.showAdjTable();
 
 		// dijkstra called from inside
+
+		//Three different cities as different starting points
 		final String startingCity = "San Francisco";
-		final String [] destinations = {"Boston", "Chicago A", "Chicago N"};
+		//final String startingCity = "Washington DC";
+		//final String startingCity = "Miami";
+
+		//Four different cities for the destination of different routes
+		final String [] destinations = {"Boston", "Chicago A", "Chicago N", "Los Angeles N"};
+
+		//A list of cities to filter
 		final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{"Los Angeles X", "Milwaukee"}));
+		//final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{""}));
+		//final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{"Boston"}));
+		//final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{"Tampa"}));
+		//final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{"Tampa","Cincinnati"}));
+		//final ArrayList<String> citiesToAvoid = new ArrayList(Arrays.asList(new String[]{"Tampa","Cincinnati","Atlanta"}));
+
+
 		System.out.println("Showing distances to " + startingCity);
 		System.out.println("Cities to avoid are " + citiesToAvoid);
 		baseBallRoutes.showDistancesTo(startingCity, citiesToAvoid);
