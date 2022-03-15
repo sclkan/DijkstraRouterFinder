@@ -14,7 +14,7 @@ src/shortestPath/Connection.java
 src/shortestPath/FHgraph.java
     - Graph data structure that contains vertices, edges and adjacency list
     - Incorporates Dijkstra's algorithm which can compute the shortest path
-    - Updated dijkstra() method that can now exclude specified cities from the shortest path
+    - Updated dijkstra() method that can now exclude specific cities from the shortest path
 
 src/shortestPath/Pair.java
     - Pair data structure that is used to create an adjacency list
@@ -31,6 +31,8 @@ resources/BaseballCitiesEdgeCosts.txt
 
 resources/RUN.txt
     - Console output of RouteFinder.java
+    - Test cases include: default cities, an empty citiesToAvoid list, a citiesToAvoid list that contains a destination,
+    and different set of cities being filtered
 
 README.txt
     - description of submitted files
