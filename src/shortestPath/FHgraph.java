@@ -148,7 +148,7 @@ class FHvertex<E>
 }
 
 /**
- * Class that allow our algorithms to define and manipulate edges
+ * Class that allows our algorithms to define and manipulate edges
  * @param <E>
  */
 class FHedge<E> implements Comparable< FHedge<E> >
