@@ -2,7 +2,10 @@ package shortestPath;
 
 import java.util.*;
 
-// --- FHvertex class ------------------------------------------------------
+/**
+ * Class that contains vertex data, adjacency list, and supporting methods that are useful for various graph algorithms
+ * @param <E>
+ */
 class FHvertex<E>
 {
     public static Stack<Integer> keyStack = new Stack<Integer>();
@@ -31,18 +34,39 @@ class FHvertex<E>
         dist = INFINITY;
         nextInPath = null;
     }
+
+    /**
+     * Constructor with no parameters
+     */
     public FHvertex() { this(null); }
 
+    /**
+     * Adds a vertex to the adjacency list
+     * @param neighbor  Vertex
+     * @param cost  Edge cost (a double)
+     */
     public void addToAdjList(FHvertex<E> neighbor, double cost)
     {
         adjList.add( new Pair<FHvertex<E>, Double> (neighbor, cost) );
     }
 
+    /**
+     * Adds a vertex to the adjacency list
+     * Converts cost to a double value
+     * @param neighbor   Vertex
+     * @param cost  Edge cost (an integer)
+     */
     public void addToAdjList(FHvertex<E> neighbor, int cost)
     {
         addToAdjList( neighbor, (double)cost );
     }
 
+    /**
+     * Compares two FHvertex objects
+     * Allows user to compare the date member or the dist member of the vertices
+     * @param rhs   Object to compare with
+     * @return  True if same value
+     */
     public boolean equals(Object rhs)
     {
         FHvertex<E> other = (FHvertex<E>)rhs;
@@ -57,6 +81,10 @@ class FHvertex<E>
         }
     }
 
+    /**
+     * Obtain hashcode value of either a distance member or data member
+     * @return  A hashcode
+     */
     public int hashCode()
     {
         switch (keyType)
@@ -71,6 +99,9 @@ class FHvertex<E>
         }
     }
 
+    /**
+     * Display the adjacency list of a vertex
+     */
     public void showAdjList()
     {
         Iterator< Pair<FHvertex<E>, Double> > iter ;
@@ -87,6 +118,11 @@ class FHvertex<E>
         System.out.println();
     }
 
+    /**
+     * Set key type
+     * @param whichType  Key type (0 for data, 1 for distance)
+     * @return  True when the key has been set
+     */
     public static boolean setKeyType( int whichType )
     {
         switch (whichType)
@@ -99,17 +135,33 @@ class FHvertex<E>
                 return false;
         }
     }
+
+    /**
+     * Adds key to stack
+     */
     public static void pushKeyType() { keyStack.push(keyType); }
+
+    /**
+     * Removes key from stack
+     */
     public static void popKeyType() { keyType = keyStack.pop(); };
 }
 
-//--- FHedge class ------------------------------------------------------
-
+/**
+ * Class that allow our algorithms to define and manipulate edges
+ * @param <E>
+ */
 class FHedge<E> implements Comparable< FHedge<E> >
 {
     FHvertex<E> source, dest;
     double cost;
 
+    /**
+     * Constructor
+     * @param src   Source
+     * @param dst   Destination
+     * @param cst  Edge cost (a double)
+     */
     FHedge( FHvertex<E> src, FHvertex<E> dst, Double cst)
     {
         source = src;
@@ -117,33 +169,57 @@ class FHedge<E> implements Comparable< FHedge<E> >
         cost = cst;
     }
 
+    /**
+     * Constructor
+     * @param src  Source
+     * @param dst  Destination
+     * @param cst  Edge cost (an integer)
+     */
     FHedge( FHvertex<E> src, FHvertex<E> dst, Integer cst)
     {
         this (src, dst, cst.doubleValue());
     }
 
+    /**
+     * Constructor with no parameters
+     */
     FHedge()
     {
         this(null, null, 1.);
     }
 
+    /**
+     * Compares the cost of two FHedge objects
+     * @param rhs  Object to compare with
+     * @return  -1 if the edge cost of the current object is lower, 1 if higher, and 0 if the same
+     */
     public int compareTo( FHedge<E> rhs )
     {
         return (cost < rhs.cost? -1 : cost > rhs.cost? 1 : 0);
     }
 }
 
+/**
+ * A public graph data class that our client will use
+ * @param <E>
+ */
 public class FHgraph<E>
 {
     // the graph data is all here --------------------------
     protected HashSet< FHvertex<E> > vertexSet;
 
-    // public graph methods --------------------------------
+    /**
+     * Constructor with no parameters
+     */
     public FHgraph ()
     {
         vertexSet = new HashSet< FHvertex<E> >();
     }
 
+    /**
+     * Constructor that takes 1 parameter
+     * @param edges  A list of FHedge objects
+     */
     public FHgraph( FHedge<E>[] edges )
     {
         this();
@@ -155,6 +231,12 @@ public class FHgraph<E>
                     edges[k].dest.data,  edges[k].cost);
     }
 
+    /**
+     * Creates vertex list and add destination to source's adjacency list
+     * @param source Source
+     * @param dest  Destination
+     * @param cost  Edge cost (a double)
+     */
     public void addEdge(E source, E dest, double cost)
     {
         FHvertex<E> src, dst;
@@ -167,12 +249,24 @@ public class FHgraph<E>
         src.addToAdjList(dst, cost);
     }
 
+    /**
+     * Creates vertex list and add destination to source's adjacency list
+     * Converts cost to a double value if necessary
+     * @param source   Source
+     * @param dest  Destination
+     * @param cost  Edge cost (an integer)
+     */
     public void addEdge(E source, E dest, int cost)
     {
         addEdge(source, dest, (double)cost);
     }
 
-    // adds vertex with x in it, and always returns ref to it
+    /**
+     * Instantiates an FHvertex object internally which holds the client data
+     * Puts the new object into the vertexSet of the graph
+     * @param x  Client's data to add to the vertex set
+     * @return  A reference to the constructed FHvertex
+     */
     public FHvertex<E> addToVertexSet(E x)
     {
         FHvertex<E> retVal, vert;
@@ -208,7 +302,9 @@ public class FHgraph<E>
         return null;   // should never happen
     }
 
-
+    /**
+     * Displays the adjacency table of the graph
+     */
     public void showAdjTable()
     {
         Iterator< FHvertex<E> > iter;
@@ -219,16 +315,27 @@ public class FHgraph<E>
         System.out.println();
     }
 
+    /**
+     * Clones the vertex set
+     * @return Cloned data
+     */
     public HashSet< FHvertex<E> > getVertSet()
     {
         return (HashSet< FHvertex<E> > )vertexSet.clone();
     }
 
+    /**
+     * Clears the vertex set
+     */
     public void clear()
     {
         vertexSet.clear();
     }
 
+    /**
+     * Clears existing vertex set and makes a new set based on input
+     * @param edges  Arraylist of FHedge objects
+     */
     public void setGraph( ArrayList< FHedge<E> > edges )
     {
         int k, numEdges;
@@ -240,11 +347,16 @@ public class FHgraph<E>
                     edges.get(k).dest.data,  edges.get(k).cost);
     }
 
-    // algorithms
+    /**
+     * Implements Dijkstra's algorithm
+     * @param x   Origin
+     * @param avoidCities   Arraylist of cities to avoid
+     * @return  Results from the algorithm
+     */
     public boolean dijkstra(E x, ArrayList<E> avoidCities)
     {
         FHvertex<E> w, s, v;
-        ArrayList<FHvertex<E>> verticesToAvoid =  new ArrayList<>();;
+        ArrayList<FHvertex<E>> verticesToAvoid =  new ArrayList<>(); //A list of FHvertex objects that we need to avoid
         Pair<FHvertex<E>, Double> edge;
         Iterator< FHvertex<E> > iter;
         Iterator< Pair<FHvertex<E>, Double> > edgeIter;
@@ -297,8 +409,13 @@ public class FHgraph<E>
         return true;
     }
 
-
-    // applies dijkstra, print path - could skip dijkstra()
+    /**
+     * Applies dijkstra, prints path
+     * @param x1   Origin
+     * @param x2   Destination
+     * @param avoidCities  Arraylist of cities to avoid
+     * @return  The shortest path from origin to destination
+     */
     public boolean showShortestPath(E x1, E x2, ArrayList<E> avoidCities)
     {
         FHvertex<E> start, stop, vert;
@@ -309,7 +426,6 @@ public class FHgraph<E>
         if (start == null || stop == null)
             return false;
 
-        // perhaps add argument opting to skip if pre-computed
         dijkstra(x1, avoidCities);
 
         if (stop.dist == FHvertex.INFINITY)
@@ -337,7 +453,12 @@ public class FHgraph<E>
         return true;
     }
 
-    // applies dijkstra, prints distances - could skip dijkstra()
+    /**
+     * Applies dijkstra, prints distances
+     * @param x   Origin
+     * @param avoidCities   Arraylist of cities to avoid
+     * @return The shortest distance between origin and other vertices
+     */
     public boolean showDistancesTo(E x, ArrayList<E> avoidCities)
     {
 
@@ -356,6 +477,11 @@ public class FHgraph<E>
         return true;
     }
 
+    /**
+     * Helper that takes some data and returns the object in the master vertexSet
+     * @param x   Data from client
+     * @return  An FHvertex object in the master vertexSet that contains the inputted data
+     */
     protected FHvertex<E> getVertexWithThisData(E x)
     {
         FHvertex<E> searchVert, vert;
