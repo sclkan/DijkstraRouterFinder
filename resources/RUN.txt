@@ -1,3 +1,775 @@
-// TODO: For every project run your program.
-//       Then copy and paste the output in a file titled RUN under resources folder. 
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: San Francisco
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter: Los Angeles X, Milwaukee
 
+NOTES:  Default parameters provided in GitHub to test and make sure the program runs fine
+-----------------------------------------------------
+The list of cities has 336 items.
+Connections found between cities hosting Baseball games:
+[Atlanta, Baltimore, 927
+, Atlanta, Chicago A, 944
+, Atlanta, Chicago N, 944
+, Atlanta, Cincinnati, 373
+, Atlanta, Cleveland, 555
+, Atlanta, Detroit, 597
+, Atlanta, Kansas City, 675
+, Atlanta, Miami, 973
+, Atlanta, Milwaukee, 669
+, Atlanta, Minneapolis, 907
+, Atlanta, Pittsburgh, 521
+, Atlanta, St. Louis, 467
+, Atlanta, Tampa, 670
+, Atlanta, Toronto, 734
+, Atlanta, Washington DC, 871
+, Baltimore, Boston, 577
+, Baltimore, Chicago A, 973
+, Baltimore, Chicago N, 973
+, Baltimore, Cincinnati, 419
+, Baltimore, Cleveland, 307
+, Baltimore, Detroit, 396
+, Baltimore, Kansas City, 960
+, Baltimore, Milwaukee, 641
+, Baltimore, Minneapolis, 937
+, Baltimore, New York A, 272
+, Baltimore, New York N, 272
+, Baltimore, Philadelphia, 144
+, Baltimore, Pittsburgh, 196
+, Baltimore, St. Louis, 730
+, Baltimore, Toronto, 333
+, Baltimore, Washington DC, 57
+, Boston, Baltimore, 577
+, Boston, Cincinnati, 733
+, Boston, Cleveland, 549
+, Boston, Detroit, 611
+, Boston, Milwaukee, 855
+, Boston, New York A, 305
+, Boston, New York N, 305
+, Boston, Philadelphia, 435
+, Boston, Pittsburgh, 481
+, Boston, Toronto, 429
+, Boston, Washington DC, 633
+, Chicago A, Atlanta, 944
+, Chicago A, Baltimore, 973
+, Chicago A, Chicago N, 0
+, Chicago A, Cincinnati, 250
+, Chicago A, Cleveland, 307
+, Chicago A, Detroit, 237
+, Chicago A, Kansas City, 412
+, Chicago A, Milwaukee, 81
+, Chicago A, Minneapolis, 354
+, Chicago A, Pittsburgh, 409
+, Chicago A, St. Louis, 262
+, Chicago A, Toronto, 468
+, Chicago A, Washington DC, 955
+, Chicago N, Atlanta, 944
+, Chicago N, Baltimore, 973
+, Chicago N, Chicago A, 0
+, Chicago N, Cincinnati, 250
+, Chicago N, Cleveland, 307
+, Chicago N, Detroit, 237
+, Chicago N, Kansas City, 412
+, Chicago N, Milwaukee, 81
+, Chicago N, Minneapolis, 354
+, Chicago N, Pittsburgh, 409
+, Chicago N, St. Louis, 262
+, Chicago N, Toronto, 468
+, Chicago N, Washington DC, 955
+, Cincinnati, Atlanta, 373
+, Cincinnati, Baltimore, 419
+, Cincinnati, Boston, 733
+, Cincinnati, Chicago A, 250
+, Cincinnati, Chicago N, 250
+, Cincinnati, Cleveland, 217
+, Cincinnati, Dallas, 817
+, Cincinnati, Detroit, 230
+, Cincinnati, Houston, 896
+, Cincinnati, Kansas City, 541
+, Cincinnati, Miami, 955
+, Cincinnati, Milwaukee, 324
+, Cincinnati, Minneapolis, 604
+, Cincinnati, New York A, 567
+, Cincinnati, New York N, 567
+, Cincinnati, Philadelphia, 501
+, Cincinnati, Pittsburgh, 256
+, Cincinnati, St. Louis, 308
+, Cincinnati, Tampa, 779
+, Cincinnati, Toronto, 407
+, Cincinnati, Washington DC, 401
+, Cleveland, Atlanta, 555
+, Cleveland, Baltimore, 307
+, Cleveland, Boston, 549
+, Cleveland, Chicago A, 307
+, Cleveland, Chicago N, 307
+, Cleveland, Cincinnati, 217
+, Cleveland, Detroit, 90
+, Cleveland, Kansas City, 698
+, Cleveland, Milwaukee, 334
+, Cleveland, Minneapolis, 629
+, Cleveland, New York A, 403
+, Cleveland, New York N, 403
+, Cleveland, Philadelphia, 358
+, Cleveland, Pittsburgh, 114
+, Cleveland, St. Louis, 491
+, Cleveland, Tampa, 937
+, Cleveland, Toronto, 188
+, Cleveland, Washington DC, 304
+, Dallas, Cincinnati, 817
+, Dallas, Detroit, 999
+, Dallas, Houston, 362
+, Dallas, Kansas City, 454
+, Dallas, Milwaukee, 857
+, Dallas, Minneapolis, 863
+, Dallas, St. Louis, 547
+, Denver, Kansas City, 557
+, Denver, Milwaukee, 912
+, Denver, Minneapolis, 698
+, Denver, Phoenix, 941
+, Denver, St. Louis, 794
+, Detroit, Atlanta, 597
+, Detroit, Baltimore, 396
+, Detroit, Boston, 611
+, Detroit, Chicago A, 237
+, Detroit, Chicago N, 237
+, Detroit, Cincinnati, 230
+, Detroit, Cleveland, 90
+, Detroit, Dallas, 999
+, Detroit, Kansas City, 643
+, Detroit, Milwaukee, 251
+, Detroit, Minneapolis, 542
+, Detroit, New York A, 480
+, Detroit, New York N, 480
+, Detroit, Philadelphia, 441
+, Detroit, Pittsburgh, 250
+, Detroit, St. Louis, 454
+, Detroit, Tampa, 994
+, Detroit, Toronto, 206
+, Detroit, Washington DC, 393
+, Houston, Cincinnati, 896
+, Houston, Dallas, 362
+, Houston, Kansas City, 646
+, Houston, St. Louis, 679
+, Kansas City, Atlanta, 675
+, Kansas City, Baltimore, 960
+, Kansas City, Chicago A, 412
+, Kansas City, Chicago N, 412
+, Kansas City, Cincinnati, 541
+, Kansas City, Cleveland, 698
+, Kansas City, Dallas, 454
+, Kansas City, Denver, 557
+, Kansas City, Detroit, 643
+, Kansas City, Houston, 646
+, Kansas City, Milwaukee, 441
+, Kansas City, Minneapolis, 411
+, Kansas City, Pittsburgh, 779
+, Kansas City, St. Louis, 237
+, Kansas City, Toronto, 846
+, Kansas City, Washington DC, 940
+, Los Angeles A, Los Angeles N, 0
+, Los Angeles A, Oakland, 552
+, Los Angeles A, Phoenix, 573
+, Los Angeles A, San Diego, 179
+, Los Angeles A, San Francisco, 558
+, Los Angeles N, Los Angeles A, 0
+, Los Angeles N, Oakland, 552
+, Los Angeles N, Phoenix, 573
+, Los Angeles N, San Diego, 179
+, Los Angeles N, San Francisco, 558
+, Miami, Atlanta, 973
+, Miami, Cincinnati, 955
+, Miami, Tampa, 329
+, Milwaukee, Baltimore, 641
+, Milwaukee, Boston, 855
+, Milwaukee, Chicago A, 81
+, Milwaukee, Chicago N, 81
+, Milwaukee, Cincinnati, 324
+, Milwaukee, Cleveland, 334
+, Milwaukee, Dallas, 857
+, Milwaukee, Denver, 912
+, Milwaukee, Detroit, 251
+, Milwaukee, Kansas City, 441
+, Milwaukee, Minneapolis, 298
+, Milwaukee, New York A, 732
+, Milwaukee, New York N, 732
+, Milwaukee, Philadelphia, 692
+, Milwaukee, Pittsburgh, 445
+, Milwaukee, St. Louis, 327
+, Milwaukee, Toronto, 430
+, Milwaukee, Washington DC, 634
+, Minneapolis, Baltimore, 937
+, Minneapolis, Chicago A, 354
+, Minneapolis, Chicago N, 354
+, Minneapolis, Cincinnati, 604
+, Minneapolis, Cleveland, 629
+, Minneapolis, Dallas, 863
+, Minneapolis, Denver, 698
+, Minneapolis, Detroit, 542
+, Minneapolis, Kansas City, 411
+, Minneapolis, Milwaukee, 298
+, Minneapolis, Philadelphia, 983
+, Minneapolis, Pittsburgh, 741
+, Minneapolis, St. Louis, 466
+, Minneapolis, Toronto, 691
+, Minneapolis, Washington DC, 931
+, New York A, Baltimore, 272
+, New York A, Boston, 305
+, New York A, Cincinnati, 567
+, New York A, Cleveland, 403
+, New York A, Detroit, 480
+, New York A, Milwaukee, 732
+, New York A, New York N, 0
+, New York A, Philadelphia, 129
+, New York A, Pittsburgh, 314
+, New York A, St. Louis, 871
+, New York A, Toronto, 341
+, New York A, Washington DC, 328
+, New York N, Baltimore, 272
+, New York N, Boston, 305
+, New York N, Cincinnati, 567
+, New York N, Cleveland, 403
+, New York N, Detroit, 480
+, New York N, Milwaukee, 732
+, New York N, New York A, 0
+, New York N, Philadelphia, 129
+, New York N, Pittsburgh, 314
+, New York N, St. Louis, 871
+, New York N, Toronto, 341
+, New York N, Washington DC, 328
+, Oakland, Los Angeles A, 552
+, Oakland, Los Angeles N, 552
+, Oakland, San Diego, 731
+, Oakland, San Francisco, 13
+, Philadelphia, Baltimore, 144
+, Philadelphia, Boston, 435
+, Philadelphia, Cincinnati, 501
+, Philadelphia, Cleveland, 358
+, Philadelphia, Detroit, 441
+, Philadelphia, Milwaukee, 692
+, Philadelphia, Minneapolis, 983
+, Philadelphia, New York A, 129
+, Philadelphia, New York N, 129
+, Philadelphia, Pittsburgh, 257
+, Philadelphia, St. Louis, 808
+, Philadelphia, Toronto, 335
+, Philadelphia, Washington DC, 199
+, Pittsburgh, Atlanta, 521
+, Pittsburgh, Baltimore, 196
+, Pittsburgh, Boston, 481
+, Pittsburgh, Chicago A, 409
+, Pittsburgh, Chicago N, 409
+, Pittsburgh, Cincinnati, 256
+, Pittsburgh, Cleveland, 114
+, Pittsburgh, Detroit, 250
+, Pittsburgh, Kansas City, 779
+, Pittsburgh, Milwaukee, 445
+, Pittsburgh, Minneapolis, 741
+, Pittsburgh, New York A, 314
+, Pittsburgh, New York N, 314
+, Pittsburgh, Philadelphia, 257
+, Pittsburgh, St. Louis, 557
+, Pittsburgh, Tampa, 874
+, Pittsburgh, Toronto, 223
+, Pittsburgh, Washington DC, 189
+, Phoenix, Denver, 941
+, Phoenix, Los Angeles A, 573
+, Phoenix, Los Angeles N, 573
+, Phoenix, San Diego, 480
+, San Diego, Los Angeles A, 179
+, San Diego, Los Angeles N, 179
+, San Diego, Oakland, 731
+, San Diego, Phoenix, 480
+, San Diego, San Francisco, 737
+, San Francisco, Los Angeles A, 558
+, San Francisco, Los Angeles N, 558
+, San Francisco, Oakland, 13
+, San Francisco, San Diego, 737
+, St. Louis, Atlanta, 467
+, St. Louis, Baltimore, 730
+, St. Louis, Chicago A, 262
+, St. Louis, Chicago N, 262
+, St. Louis, Cincinnati, 308
+, St. Louis, Cleveland, 491
+, St. Louis, Dallas, 547
+, St. Louis, Denver, 794
+, St. Louis, Detroit, 454
+, St. Louis, Houston, 679
+, St. Louis, Kansas City, 237
+, St. Louis, Milwaukee, 327
+, St. Louis, Minneapolis, 466
+, St. Louis, New York A, 871
+, St. Louis, New York N, 871
+, St. Louis, Philadelphia, 808
+, St. Louis, Pittsburgh, 557
+, St. Louis, Tampa, 861
+, St. Louis, Toronto, 660
+, St. Louis, Washington DC, 708
+, Tampa, Atlanta, 670
+, Tampa, Cincinnati, 779
+, Tampa, Cleveland, 937
+, Tampa, Detroit, 994
+, Tampa, Miami, 329
+, Tampa, Pittsburgh, 874
+, Tampa, St. Louis, 861
+, Toronto, Baltimore, 333
+, Toronto, Boston, 429
+, Toronto, Chicago A, 468
+, Toronto, Chicago N, 468
+, Toronto, Cincinnati, 407
+, Toronto, Cleveland, 188
+, Toronto, Detroit, 206
+, Toronto, Kansas City, 846
+, Toronto, Milwaukee, 430
+, Toronto, Minneapolis, 691
+, Toronto, New York A, 341
+, Toronto, New York N, 341
+, Toronto, Philadelphia, 335
+, Toronto, Pittsburgh, 223
+, Toronto, St. Louis, 660
+, Toronto, Washington DC, 350
+, Washington DC, Atlanta, 871
+, Washington DC, Baltimore, 57
+, Washington DC, Boston, 633
+, Washington DC, Chicago A, 955
+, Washington DC, Chicago N, 955
+, Washington DC, Cincinnati, 401
+, Washington DC, Cleveland, 304
+, Washington DC, Detroit, 393
+, Washington DC, Kansas City, 940
+, Washington DC, Milwaukee, 634
+, Washington DC, Minneapolis, 931
+, Washington DC, New York A, 328
+, Washington DC, New York N, 328
+, Washington DC, Philadelphia, 199
+, Washington DC, Pittsburgh, 189
+, Washington DC, St. Louis, 708
+, Washington DC, Toronto, 350
+]
+------------------------
+Adj List for Milwaukee: Kansas City(441.0) Detroit(251.0) Chicago A(81.0) Cincinnati(324.0) Cleveland(334.0) Chicago N(81.0) Washington DC(634.0) Baltimore(641.0) Minneapolis(298.0) New York A(732.0) New York N(732.0) Denver(912.0) Dallas(857.0) St. Louis(327.0) Philadelphia(692.0) Toronto(430.0) Boston(855.0) Pittsburgh(445.0)
+Adj List for Detroit: Milwaukee(251.0) Kansas City(643.0) Chicago A(237.0) Cincinnati(230.0) Cleveland(90.0) Chicago N(237.0) Washington DC(393.0) Baltimore(396.0) Minneapolis(542.0) New York A(480.0) Atlanta(597.0) New York N(480.0) Dallas(999.0) St. Louis(454.0) Tampa(994.0) Philadelphia(441.0) Toronto(206.0) Boston(611.0) Pittsburgh(250.0)
+Adj List for Cincinnati: Milwaukee(324.0) Kansas City(541.0) Detroit(230.0) Chicago A(250.0) Cleveland(217.0) Miami(955.0) Chicago N(250.0) Washington DC(401.0) Baltimore(419.0) Minneapolis(604.0) New York A(567.0) Atlanta(373.0) New York N(567.0) Dallas(817.0) St. Louis(308.0) Tampa(779.0) Philadelphia(501.0) Toronto(407.0) Boston(733.0) Houston(896.0) Pittsburgh(256.0)
+Adj List for Oakland: San Francisco(13.0) San Diego(731.0) Los Angeles A(552.0) Los Angeles N(552.0)
+Adj List for Cleveland: Milwaukee(334.0) Kansas City(698.0) Detroit(90.0) Chicago A(307.0) Cincinnati(217.0) Chicago N(307.0) Washington DC(304.0) Baltimore(307.0) Minneapolis(629.0) New York A(403.0) Atlanta(555.0) New York N(403.0) St. Louis(491.0) Tampa(937.0) Philadelphia(358.0) Toronto(188.0) Boston(549.0) Pittsburgh(114.0)
+Adj List for San Diego: San Francisco(737.0) Los Angeles A(179.0) Los Angeles N(179.0) Phoenix(480.0) Oakland(731.0)
+Adj List for Minneapolis: Milwaukee(298.0) Kansas City(411.0) Detroit(542.0) Chicago A(354.0) Cincinnati(604.0) Cleveland(629.0) Chicago N(354.0) Washington DC(931.0) Baltimore(937.0) Denver(698.0) Dallas(863.0) St. Louis(466.0) Philadelphia(983.0) Toronto(691.0) Pittsburgh(741.0)
+Adj List for Atlanta: Milwaukee(669.0) Kansas City(675.0) Detroit(597.0) Chicago A(944.0) Cincinnati(373.0) Cleveland(555.0) Miami(973.0) Chicago N(944.0) Washington DC(871.0) Baltimore(927.0) Minneapolis(907.0) St. Louis(467.0) Tampa(670.0) Toronto(734.0) Pittsburgh(521.0)
+Adj List for Los Angeles A: San Francisco(558.0) San Diego(179.0) Los Angeles N(0.0) Phoenix(573.0) Oakland(552.0)
+Adj List for Los Angeles N: San Francisco(558.0) San Diego(179.0) Los Angeles A(0.0) Phoenix(573.0) Oakland(552.0)
+Adj List for Phoenix: San Diego(480.0) Los Angeles A(573.0) Los Angeles N(573.0) Denver(941.0)
+Adj List for Denver: Milwaukee(912.0) Kansas City(557.0) Minneapolis(698.0) Phoenix(941.0) St. Louis(794.0)
+Adj List for St. Louis: Milwaukee(327.0) Kansas City(237.0) Detroit(454.0) Chicago A(262.0) Cincinnati(308.0) Cleveland(491.0) Chicago N(262.0) Washington DC(708.0) Baltimore(730.0) Minneapolis(466.0) New York A(871.0) Atlanta(467.0) New York N(871.0) Denver(794.0) Dallas(547.0) Tampa(861.0) Philadelphia(808.0) Toronto(660.0) Houston(679.0) Pittsburgh(557.0)
+Adj List for Dallas: Milwaukee(857.0) Kansas City(454.0) Detroit(999.0) Minneapolis(863.0) Cincinnati(817.0) St. Louis(547.0) Houston(362.0)
+Adj List for Pittsburgh: Milwaukee(445.0) Kansas City(779.0) Detroit(250.0) Chicago A(409.0) Cincinnati(256.0) Cleveland(114.0) Chicago N(409.0) Washington DC(189.0) Baltimore(196.0) Minneapolis(741.0) New York A(314.0) Atlanta(521.0) New York N(314.0) St. Louis(557.0) Tampa(874.0) Philadelphia(257.0) Toronto(223.0) Boston(481.0)
+Adj List for Boston: Milwaukee(855.0) Washington DC(633.0) Detroit(611.0) Baltimore(577.0) New York A(305.0) New York N(305.0) Cincinnati(733.0) Cleveland(549.0) Philadelphia(435.0) Toronto(429.0) Pittsburgh(481.0)
+Adj List for Kansas City: Milwaukee(441.0) Detroit(643.0) Chicago A(412.0) Cincinnati(541.0) Cleveland(698.0) Chicago N(412.0) Washington DC(940.0) Baltimore(960.0) Minneapolis(411.0) Atlanta(675.0) Denver(557.0) Dallas(454.0) St. Louis(237.0) Toronto(846.0) Houston(646.0) Pittsburgh(779.0)
+Adj List for Chicago A: Milwaukee(81.0) Kansas City(412.0) Detroit(237.0) Cincinnati(250.0) Cleveland(307.0) Chicago N(0.0) Washington DC(955.0) Baltimore(973.0) Minneapolis(354.0) Atlanta(944.0) St. Louis(262.0) Toronto(468.0) Pittsburgh(409.0)
+Adj List for Miami: Atlanta(973.0) Cincinnati(955.0) Tampa(329.0)
+Adj List for Chicago N: Milwaukee(81.0) Kansas City(412.0) Detroit(237.0) Chicago A(0.0) Cincinnati(250.0) Cleveland(307.0) Washington DC(955.0) Baltimore(973.0) Minneapolis(354.0) Atlanta(944.0) St. Louis(262.0) Toronto(468.0) Pittsburgh(409.0)
+Adj List for San Francisco: San Diego(737.0) Los Angeles A(558.0) Los Angeles N(558.0) Oakland(13.0)
+Adj List for Washington DC: Milwaukee(634.0) Kansas City(940.0) Detroit(393.0) Chicago A(955.0) Cincinnati(401.0) Cleveland(304.0) Chicago N(955.0) Baltimore(57.0) Minneapolis(931.0) New York A(328.0) Atlanta(871.0) New York N(328.0) St. Louis(708.0) Philadelphia(199.0) Toronto(350.0) Boston(633.0) Pittsburgh(189.0)
+Adj List for Baltimore: Milwaukee(641.0) Kansas City(960.0) Detroit(396.0) Chicago A(973.0) Cincinnati(419.0) Cleveland(307.0) Chicago N(973.0) Washington DC(57.0) Minneapolis(937.0) New York A(272.0) New York N(272.0) St. Louis(730.0) Philadelphia(144.0) Toronto(333.0) Boston(577.0) Pittsburgh(196.0)
+Adj List for New York A: Milwaukee(732.0) Washington DC(328.0) Detroit(480.0) Baltimore(272.0) New York N(0.0) Cincinnati(567.0) St. Louis(871.0) Cleveland(403.0) Philadelphia(129.0) Toronto(341.0) Boston(305.0) Pittsburgh(314.0)
+Adj List for New York N: Milwaukee(732.0) Washington DC(328.0) Detroit(480.0) Baltimore(272.0) New York A(0.0) Cincinnati(567.0) St. Louis(871.0) Cleveland(403.0) Philadelphia(129.0) Toronto(341.0) Boston(305.0) Pittsburgh(314.0)
+Adj List for Tampa: Detroit(994.0) Atlanta(670.0) Cincinnati(779.0) St. Louis(861.0) Cleveland(937.0) Miami(329.0) Pittsburgh(874.0)
+Adj List for Toronto: Milwaukee(430.0) Kansas City(846.0) Detroit(206.0) Chicago A(468.0) Cincinnati(407.0) Cleveland(188.0) Chicago N(468.0) Washington DC(350.0) Baltimore(333.0) Minneapolis(691.0) New York A(341.0) New York N(341.0) St. Louis(660.0) Philadelphia(335.0) Boston(429.0) Pittsburgh(223.0)
+Adj List for Philadelphia: Milwaukee(692.0) Detroit(441.0) Cincinnati(501.0) Cleveland(358.0) Washington DC(199.0) Baltimore(144.0) Minneapolis(983.0) New York A(129.0) New York N(129.0) St. Louis(808.0) Toronto(335.0) Boston(435.0) Pittsburgh(257.0)
+Adj List for Houston: Kansas City(646.0) Cincinnati(896.0) Dallas(362.0) St. Louis(679.0)
+
+Showing distances to San Francisco
+Cities to avoid are [Los Angeles X, Milwaukee]
+Milwaukee 1.7976931348623157E308
+Detroit 3272.0
+Cincinnati 3170.0
+Oakland 13.0
+Cleveland 3327.0
+San Diego 737.0
+Minneapolis 2770.0
+Atlanta 3304.0
+Los Angeles A 558.0
+Los Angeles N 558.0
+Phoenix 1131.0
+Denver 2072.0
+St. Louis 2866.0
+Dallas 3083.0
+Pittsburgh 3408.0
+Boston 3876.0
+Kansas City 2629.0
+Chicago A 3041.0
+Miami 4056.0
+Chicago N 3041.0
+San Francisco 0.0
+Washington DC 3569.0
+Baltimore 3589.0
+New York A 3722.0
+New York N 3722.0
+Tampa 3727.0
+Toronto 3461.0
+Philadelphia 3665.0
+Houston 3275.0
+
+
+Cost of shortest path from San Francisco to Boston: 3876.0
+San Francisco -> Los Angeles A -> Phoenix -> Denver -> Kansas City -> Cleveland -> Boston
+
+Cost of shortest path from San Francisco to Chicago A: 3041.0
+San Francisco -> Los Angeles A -> Phoenix -> Denver -> Kansas City -> Chicago A
+
+Cost of shortest path from San Francisco to Chicago N: 3041.0
+San Francisco -> Los Angeles A -> Phoenix -> Denver -> Kansas City -> Chicago N
+
+Cost of shortest path from San Francisco to Los Angeles N: 558.0
+San Francisco -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Washington DC
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter:
+
+NOTES:  Testing with an empty citiesToAvoid list
+-----------------------------------------------------
+
+Showing distances to Washington DC
+Cities to avoid are []
+Milwaukee 634.0
+Detroit 393.0
+Cincinnati 401.0
+Oakland 3563.0
+Cleveland 303.0
+San Diego 2918.0
+Minneapolis 930.0
+Atlanta 710.0
+Los Angeles A 3011.0
+Los Angeles N 3011.0
+Phoenix 2438.0
+Denver 1497.0
+St. Louis 708.0
+Dallas 1218.0
+Pittsburgh 189.0
+Boston 633.0
+Kansas City 940.0
+Chicago A 598.0
+Miami 1356.0
+Chicago N 598.0
+San Francisco 3569.0
+Washington DC 0.0
+Baltimore 57.0
+New York A 328.0
+New York N 328.0
+Tampa 1063.0
+Toronto 350.0
+Philadelphia 199.0
+Houston 1297.0
+
+
+Cost of shortest path from Washington DC to Boston: 633.0
+Washington DC -> Boston
+
+Cost of shortest path from Washington DC to Chicago A: 598.0
+Washington DC -> Pittsburgh -> Chicago A
+
+Cost of shortest path from Washington DC to Chicago N: 598.0
+Washington DC -> Pittsburgh -> Chicago N
+
+Cost of shortest path from Washington DC to Los Angeles N: 3011.0
+Washington DC -> Kansas City -> Denver -> Phoenix -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Washington DC
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter: Boston
+
+NOTES:  Testing adding a destination to the citiesToAvoid list
+-----------------------------------------------------
+Showing distances to Washington DC
+Cities to avoid are [Boston]
+Milwaukee 634.0
+Detroit 393.0
+Cincinnati 401.0
+Oakland 3563.0
+Cleveland 303.0
+San Diego 2918.0
+Minneapolis 930.0
+Atlanta 710.0
+Los Angeles A 3011.0
+Los Angeles N 3011.0
+Phoenix 2438.0
+Denver 1497.0
+St. Louis 708.0
+Dallas 1218.0
+Pittsburgh 189.0
+Boston 1.7976931348623157E308
+Kansas City 940.0
+Chicago A 598.0
+Miami 1356.0
+Chicago N 598.0
+San Francisco 3569.0
+Washington DC 0.0
+Baltimore 57.0
+New York A 328.0
+New York N 328.0
+Tampa 1063.0
+Toronto 350.0
+Philadelphia 199.0
+Houston 1297.0
+
+
+No path exists.
+
+Cost of shortest path from Washington DC to Chicago A: 598.0
+Washington DC -> Pittsburgh -> Chicago A
+
+Cost of shortest path from Washington DC to Chicago N: 598.0
+Washington DC -> Pittsburgh -> Chicago N
+
+Cost of shortest path from Washington DC to Los Angeles N: 3011.0
+Washington DC -> Kansas City -> Denver -> Phoenix -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Miami
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter:
+
+NOTES:  Compare and contrast the routes when a different set of cities is being filtered.
+No filter applied in this scenario
+-----------------------------------------------------
+Showing distances to Miami
+Cities to avoid are []
+Milwaukee 1279.0
+Detroit 1185.0
+Cincinnati 955.0
+Oakland 4050.0
+Cleveland 1172.0
+San Diego 3405.0
+Minneapolis 1559.0
+Atlanta 973.0
+Los Angeles A 3498.0
+Los Angeles N 3498.0
+Phoenix 2925.0
+Denver 1984.0
+St. Louis 1190.0
+Dallas 1737.0
+Pittsburgh 1203.0
+Boston 1684.0
+Kansas City 1427.0
+Chicago A 1205.0
+Miami 0.0
+Chicago N 1205.0
+San Francisco 4056.0
+Washington DC 1356.0
+Baltimore 1374.0
+New York A 1517.0
+New York N 1517.0
+Tampa 329.0
+Toronto 1360.0
+Philadelphia 1456.0
+Houston 1851.0
+
+
+Cost of shortest path from Miami to Boston: 1684.0
+Miami -> Tampa -> Pittsburgh -> Boston
+
+Cost of shortest path from Miami to Chicago A: 1205.0
+Miami -> Cincinnati -> Chicago A
+
+Cost of shortest path from Miami to Chicago N: 1205.0
+Miami -> Cincinnati -> Chicago N
+
+Cost of shortest path from Miami to Los Angeles N: 3498.0
+Miami -> Tampa -> St. Louis -> Denver -> Phoenix -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Miami
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter: Tampa
+
+NOTES:  Compare and contrast the routes when a different set of cities is being filtered.
+Tampa is filtered out in this scenario
+-----------------------------------------------------
+Showing distances to Miami
+Cities to avoid are [Tampa]
+Milwaukee 1279.0
+Detroit 1185.0
+Cincinnati 955.0
+Oakland 4119.0
+Cleveland 1172.0
+San Diego 3474.0
+Minneapolis 1559.0
+Atlanta 973.0
+Los Angeles A 3567.0
+Los Angeles N 3567.0
+Phoenix 2994.0
+Denver 2053.0
+St. Louis 1263.0
+Dallas 1772.0
+Pittsburgh 1211.0
+Boston 1688.0
+Kansas City 1496.0
+Chicago A 1205.0
+Miami 0.0
+Chicago N 1205.0
+San Francisco 4125.0
+Washington DC 1356.0
+Baltimore 1374.0
+New York A 1522.0
+New York N 1522.0
+Tampa 1.7976931348623157E308
+Toronto 1360.0
+Philadelphia 1456.0
+Houston 1851.0
+
+
+Cost of shortest path from Miami to Boston: 1688.0
+Miami -> Cincinnati -> Boston
+
+Cost of shortest path from Miami to Chicago A: 1205.0
+Miami -> Cincinnati -> Chicago A
+
+Cost of shortest path from Miami to Chicago N: 1205.0
+Miami -> Cincinnati -> Chicago N
+
+Cost of shortest path from Miami to Los Angeles N: 3567.0
+Miami -> Cincinnati -> Kansas City -> Denver -> Phoenix -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Miami
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter: Tampa, Cincinnati
+
+NOTES:  Compare and contrast the routes when a different set of cities is being filtered.
+Tampa and Cincinnati are filtered out in this scenario
+-----------------------------------------------------
+Showing distances to Miami
+Cities to avoid are [Tampa, Cincinnati]
+Milwaukee 1642.0
+Detroit 1570.0
+Cincinnati 1.7976931348623157E308
+Oakland 4271.0
+Cleveland 1528.0
+San Diego 3626.0
+Minneapolis 1880.0
+Atlanta 973.0
+Los Angeles A 3719.0
+Los Angeles N 3719.0
+Phoenix 3146.0
+Denver 2205.0
+St. Louis 1440.0
+Dallas 1987.0
+Pittsburgh 1494.0
+Boston 1975.0
+Kansas City 1648.0
+Chicago A 1702.0
+Miami 0.0
+Chicago N 1702.0
+San Francisco 4277.0
+Washington DC 1683.0
+Baltimore 1690.0
+New York A 1808.0
+New York N 1808.0
+Tampa 1.7976931348623157E308
+Toronto 1707.0
+Philadelphia 1751.0
+Houston 2119.0
+
+
+Cost of shortest path from Miami to Boston: 1975.0
+Miami -> Atlanta -> Pittsburgh -> Boston
+
+Cost of shortest path from Miami to Chicago A: 1702.0
+Miami -> Atlanta -> St. Louis -> Chicago A
+
+Cost of shortest path from Miami to Chicago N: 1702.0
+Miami -> Atlanta -> St. Louis -> Chicago N
+
+Cost of shortest path from Miami to Los Angeles N: 3719.0
+Miami -> Atlanta -> Kansas City -> Denver -> Phoenix -> Los Angeles N
+
+Done.
+
+Process finished with exit code 0
+
+-----------------------------------------------------
+-----------------------------------------------------
+Test file: BaseballCitiesEdgeCosts.txt
+Starting city: Miami
+Destinations: Boston, Chicago A, Chicago N, Los Angeles N
+Cities to filter: Tampa, Cincinnati, Atlanta
+
+NOTES:  Compare and contrast the routes when a different set of cities is being filtered.
+Tampa, Cincinnati, Atlanta are filtered out in this scenario
+-----------------------------------------------------
+Showing distances to Miami
+Cities to avoid are [Tampa, Cincinnati, Atlanta]
+Milwaukee 1.7976931348623157E308
+Detroit 1.7976931348623157E308
+Cincinnati 1.7976931348623157E308
+Oakland 1.7976931348623157E308
+Cleveland 1.7976931348623157E308
+San Diego 1.7976931348623157E308
+Minneapolis 1.7976931348623157E308
+Atlanta 1.7976931348623157E308
+Los Angeles A 1.7976931348623157E308
+Los Angeles N 1.7976931348623157E308
+Phoenix 1.7976931348623157E308
+Denver 1.7976931348623157E308
+St. Louis 1.7976931348623157E308
+Dallas 1.7976931348623157E308
+Pittsburgh 1.7976931348623157E308
+Boston 1.7976931348623157E308
+Kansas City 1.7976931348623157E308
+Chicago A 1.7976931348623157E308
+Miami 0.0
+Chicago N 1.7976931348623157E308
+San Francisco 1.7976931348623157E308
+Washington DC 1.7976931348623157E308
+Baltimore 1.7976931348623157E308
+New York A 1.7976931348623157E308
+New York N 1.7976931348623157E308
+Tampa 1.7976931348623157E308
+Toronto 1.7976931348623157E308
+Philadelphia 1.7976931348623157E308
+Houston 1.7976931348623157E308
+
+
+No path exists.
+
+No path exists.
+
+No path exists.
+
+No path exists.
+
+Done.
+
+Process finished with exit code 0
