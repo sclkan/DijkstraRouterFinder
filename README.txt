@@ -45,5 +45,5 @@ Miami -> Tampa -> St. Louis -> Denver -> Phoenix -> Los Angeles N, which is abou
 However, if we want to avoid Tampa, then the shortest route becomes Miami -> Cincinnati -> Kansas City ->
 Denver -> Phoenix -> Los Angeles N, for a total of 3,567 miles.  Now, if we also add Cincinnati to the list, then we would
 have to drive through Atlanta (Miami -> Atlanta -> Kansas City -> Denver -> Phoenix -> Los Angeles N), which increases
- the total distance to 3,719 miles.  But if we decide to skip Atlanta as well, this trip would not be possible since
+ the total distance to 3,719 miles.  But if we decide to skip Atlanta as well, this trip would not be feasible since
  we would eliminate all the possible routes from Miami to LA.
