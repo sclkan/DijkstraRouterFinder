@@ -36,3 +36,14 @@ resources/RUN.txt
 
 README.txt
     - description of submitted files
+
+Observations:
+
+The number of cities we choose to filter could significantly impact the route and distance of our trip.
+For example, if we want to travel from Miami to Los Angeles N, the shortest path is from
+Miami -> Tampa -> St. Louis -> Denver -> Phoenix -> Los Angeles N, which is about 3,498 miles.
+However, if we want to avoid Tampa, then the shortest route becomes Miami -> Cincinnati -> Kansas City ->
+Denver -> Phoenix -> Los Angeles N, for a total of 3,567 miles.  Now, if we also add Cincinnati to the list, then we would
+have to drive through Atlanta (Miami -> Atlanta -> Kansas City -> Denver -> Phoenix -> Los Angeles N), which increases
+ the total distance to 3,719 miles.  But if we decide to skip Atlanta as well, this trip would not be possible since
+ we would eliminate all the possible routes from Miami to LA.
